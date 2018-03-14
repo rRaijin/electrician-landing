@@ -1,0 +1,809 @@
+/*******Colors****** */
+/******************* */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document ========================================================================== */
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+figcaption,
+figure,
+main {
+  display: block; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+a:active,
+a:hover {
+  outline-width: 0; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
+b,
+strong {
+  font-weight: inherit; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+audio,
+video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+img {
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+/*1. Add the correct display in IE 9-. 2. Add the correct vertical alignment in Chrome, Firefox, and Opera. */
+progress {
+  display: inline-block;
+  vertical-align: baseline; }
+
+/*Remove the default vertical scrollbar in IE. */
+textarea {
+  overflow: auto; }
+
+/*1. Add the correct box sizing in IE 10-. 2. Remove the padding in IE 10-. */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/*Correct the cursor style of increment and decrement buttons in Chrome. */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/* 1. Correct the odd appearance in Chrome and Safari. 2. Correct the outline style in Safari. */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+/*Remove the inner padding and cancel buttons in Chrome and Safari on macOS. */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*1. Correct the inability to style clickable types in iOS and Safari. 2. Change font properties to `inherit` in Safari. */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+/* Interactive ========================================================================== */
+/*Add the correct display in IE 9-. 1. Add the correct display in Edge, IE, and Firefox. */
+details,
+menu {
+  display: block; }
+
+/*Add the correct display in all browsers. */
+summary {
+  display: list-item; }
+
+/* Scripting ========================================================================== */
+/*Add the correct display in IE 9-. */
+canvas {
+  display: inline-block; }
+
+/*Add the correct display in IE. */
+template {
+  display: none; }
+
+/* Hidden ========================================================================== */
+/*Add the correct display in IE 10-. */
+[hidden] {
+  display: none; }
+
+html,
+body {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased; }
+
+.loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+
+.loaderInner {
+  background-image: url("../media/work_images/loader.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  left: 50%;
+  top: 50%;
+  position: absolute; }
+
+/*************************************************** */
+#telegramm-form .modal-dialog, #telegramm2-form .modal-dialog {
+  text-align: center;
+  margin-top: 15%; }
+#telegramm-form .modal-content, #telegramm2-form .modal-content {
+  background-color: #d0c0a5;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  width: 300px; }
+  #telegramm-form .modal-content .close, #telegramm2-form .modal-content .close {
+    color: #000; }
+  #telegramm-form .modal-content .modal-header, #telegramm2-form .modal-content .modal-header {
+    padding: 5px; }
+  #telegramm-form .modal-content .modal-body, #telegramm2-form .modal-content .modal-body {
+    padding: 5px 0 15px; }
+    #telegramm-form .modal-content .modal-body form, #telegramm2-form .modal-content .modal-body form {
+      display: inline;
+      text-align: center;
+      padding: 5px;
+      width: 100px;
+      font-weight: 600;
+      font-size: 16px; }
+      #telegramm-form .modal-content .modal-body form p label, #telegramm2-form .modal-content .modal-body form p label {
+        display: none; }
+      #telegramm-form .modal-content .modal-body form input, #telegramm-form .modal-content .modal-body form button, #telegramm2-form .modal-content .modal-body form input, #telegramm2-form .modal-content .modal-body form button {
+        line-height: 1.5; }
+      #telegramm-form .modal-content .modal-body form button, #telegramm2-form .modal-content .modal-body form button {
+        background-color: #fb6805;
+        color: #fff;
+        padding: 5px;
+        width: 100px;
+        font-weight: 600;
+        font-size: 18px;
+        border: none; }
+
+/* Custom Button Styles */
+.btn-light {
+  font-size: 23px;
+  border-radius: 50%;
+  color: #847878;
+  background-color: #fffdfd;
+  border: 0.5px solid; }
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+  color: white;
+  background-color: #ff6633; }
+
+.btn-arrow {
+  width: 40px;
+  height: 40px;
+  margin-top: 70px;
+  padding: 4px 12px;
+  font-size: 20px;
+  color: white; }
+
+.project-button {
+  padding: 12px;
+  color: black;
+  border: 2px solid #65a6cc;
+  border-radius: 0;
+  margin-top: 12px; }
+
+/* Side Menu */
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  margin-right: -250px;
+  overflow-y: auto;
+  background: black;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s; }
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px; }
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: white; }
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2); }
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none; }
+
+.sidebar-nav > .sidebar-brand {
+  font-size: 18px;
+  line-height: 55px;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase; }
+
+.sidebar-nav > .sidebar-brand a {
+  color: #ff6633; }
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none; }
+
+#menu-toggle {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0; }
+
+#sidebar-wrapper.active {
+  right: 250px;
+  width: 250px;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s; }
+
+.toggle {
+  margin: 20px 20px 0 0; }
+
+.top-row {
+  background-color: #d4dade;
+  padding-bottom: 10px; }
+
+.manifest p {
+  padding: 5px 60px 0 0;
+  text-align: justify;
+  font-size: 18px; }
+
+.contacts {
+  text-align: start; }
+  .contacts ul {
+    text-align: center;
+    margin: 0;
+    padding: 7px 0;
+    overflow: hidden;
+    list-style-type: none;
+    position: relative; }
+    .contacts ul li {
+      margin-left: 15px;
+      float: left;
+      color: #000;
+      font-size: 20px;
+      font-weight: 600; }
+      .contacts ul li i {
+        margin-right: 5px;
+        vertical-align: text-top; }
+  .contacts p {
+    text-align: center;
+    margin-top: 10px;
+    color: #ca0000;
+    font-size: 17px;
+    font-weight: 600; }
+  .contacts a {
+    background-color: #ff9e12;
+    padding: 5px 50px;
+    font-size: 25px;
+    font-weight: 600;
+    color: white; }
+
+.slogan {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-left: 8%;
+  color: #fff; }
+  .slogan h1 {
+    margin-bottom: 0; }
+  .slogan h2 {
+    margin-top: 7px; }
+  .slogan p {
+    text-align: justify;
+    padding-right: 10%;
+    font-size: 20px; }
+
+.contact-form {
+  border-radius: 20px;
+  border: 3px solid #ff9e12;
+  margin-top: 40px;
+  text-align: center;
+  background-color: #ffffff;
+  display: block;
+  padding: 10px 20px; }
+  .contact-form h3 {
+    margin: 0 0 10px; }
+  .contact-form p {
+    text-align: justify;
+    padding: 0 20px; }
+  .contact-form textarea {
+    height: 100px;
+    width: 90%;
+    line-height: 2;
+    margin-bottom: 10px; }
+  .contact-form input {
+    line-height: 2;
+    width: 90%;
+    margin-bottom: 10px; }
+    .contact-form input:last-child {
+      display: block;
+      line-height: 2;
+      width: 35%;
+      margin-left: 35%; }
+
+#advantage-section, #skills-section, #price-list {
+  padding-bottom: 50px;
+  background-color: #f4f7f9; }
+  #advantage-section h2, #skills-section h2, #price-list h2 {
+    color: #fff;
+    text-align: center;
+    background-color: #847c7c;
+    margin: 0;
+    padding: 25px 0;
+    font-size: 30px;
+    margin-bottom: 50px; }
+  #advantage-section h3, #skills-section h3, #price-list h3 {
+    text-align: center;
+    margin: 5px 0 20px;
+    font-size: 26px;
+    color: #6767f3;
+    font-weight: 600; }
+  #advantage-section figure, #skills-section figure, #price-list figure {
+    background-color: #fff;
+    border: 2px solid #6767f3;
+    border-radius: 10px;
+    padding: 10px 20px; }
+    #advantage-section figure p, #skills-section figure p, #price-list figure p {
+      text-align: justify;
+      margin-bottom: 10px; }
+    #advantage-section figure img, #skills-section figure img, #price-list figure img {
+      margin: 0 auto;
+      height: 200px; }
+    #advantage-section figure figcaption, #skills-section figure figcaption, #price-list figure figcaption {
+      font-size: 16px;
+      margin: 0; }
+
+.skills {
+  padding: 0 40px; }
+  .skills h2 {
+    margin: 0 -40px 50px !important; }
+
+.skill-wrapper {
+  border: 1px solid;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 6px;
+  background-color: #fff; }
+  .skill-wrapper img {
+    float: left;
+    max-height: 75px;
+    margin-right: 10px; }
+  .skill-wrapper p {
+    display: inline;
+    text-align: justify;
+    color: #69699c; }
+
+.warning-section {
+  padding-bottom: 40px;
+  background-color: #dee1f7;
+  margin-left: -15px; }
+  .warning-section .warning-text h2 {
+    text-align: center; }
+  .warning-section .warning-text p {
+    font-size: 18px;
+    text-align: justify;
+    color: #3d444e; }
+  .warning-section .warning-text ul {
+    list-style-type: none; }
+    .warning-section .warning-text ul li {
+      font-size: 16px; }
+  .warning-section .warning-img {
+    padding-top: 20px;
+    padding-left: 60px; }
+
+.parallax-main-callback {
+  text-align: center;
+  height: 100px; }
+  .parallax-main-callback h4 {
+    padding-top: 10px;
+    font-size: 23px;
+    margin: 0;
+    color: #fff;
+    padding-bottom: 10px; }
+  .parallax-main-callback a {
+    font-size: 17px;
+    padding: 7px 30px;
+    color: #101010;
+    background-color: #ec860c;
+    border-color: #ec860c; }
+    .parallax-main-callback a:hover {
+      text-decoration: none;
+      cursor: pointer; }
+
+.portfolio {
+  background-color: #f4f7f9;
+  padding-top: 50px; }
+  .portfolio h2 {
+    background-color: #847c7c;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #fff; }
+
+.gallery-grid {
+  padding: 0; }
+
+.gallery1 {
+  position: relative; }
+
+.gallery1 .textbox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  background-color: #65a6cc;
+  opacity: 0.9; }
+  .gallery1 .textbox a {
+    text-decoration: none;
+    color: black; }
+
+.gallery1:hover .textbox {
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+.gallery-grid img {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0; }
+
+.textbox {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease; }
+  .textbox .button {
+    border: 2px solid #fff;
+    padding: 12px 18px;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    margin-top: 24%;
+    font-size: 18px;
+    color: #fff; }
+    .textbox .button:hover {
+      border: 2px solid #000;
+      color: white; }
+  .textbox h4 {
+    font-size: 22px;
+    color: #fff;
+    margin-top: 115px;
+    font-family: "Nunito", sans-serif;
+    text-align: center; }
+  .textbox p {
+    font-size: 14px !important;
+    color: #fff;
+    margin: 6px 0 0 0 !important;
+    text-align: center;
+    text-transform: uppercase; }
+
+#price-list {
+  text-align: center;
+  padding-top: 50px;
+  background: #f4f7f9; }
+  #price-list figcaption {
+    font-size: 18px !important;
+    font-weight: 600; }
+
+footer {
+  padding: 30px 0;
+  margin: 0 -15px;
+  background-color: black;
+  text-align: center; }
+  footer p {
+    color: white;
+    font-size: 20px; }
+
+@media screen and (min-width: 1024px) {
+  .contacts ul li {
+    font-size: 18px; }
+  .contacts a {
+    font-size: 23px;
+    padding: 5px 40px; } }
+@media(min-width: 768px) and (max-width: 1024px) {
+  .toggle {
+    margin-top: 10px; }
+
+  .manifest a {
+    padding: 5px 20px;
+    font-size: 18px; }
+  .manifest p {
+    padding: 5px;
+    font-size: 14px; }
+
+  .contacts ul li {
+    font-size: 16px; }
+  .contacts a {
+    font-size: 20px;
+    padding: 5px; }
+
+  .slogan p {
+    font-size: 16px; }
+
+  .warning-section .warning-text p {
+    font-size: 16px; }
+  .warning-section .warning-text ul li p {
+    margin: 0; }
+
+  #advantage-section h2, #skills-section h2, #portfolio h2, #price-list h2 {
+    padding: 16px 0; }
+
+  #advantage-section figure, #price-list figure {
+    margin-left: 0;
+    margin-right: 0;
+    height: 291px; }
+    #advantage-section figure h3, #price-list figure h3 {
+      font-size: 20px; }
+    #advantage-section figure figcaption, #price-list figure figcaption {
+      font-size: 14px;
+      text-align: center; }
+    #advantage-section figure img, #price-list figure img {
+      height: 150px !important;
+      width: 150px; } }
+@media(min-width: 426px) and (max-width: 767px) {
+  .contacts {
+    text-align: center; }
+    .contacts a {
+      font-size: 14px;
+      padding: 5px; }
+
+  .skill-wrapper {
+    height: 140px;
+    text-align: center; }
+    .skill-wrapper img {
+      margin: 0 auto;
+      float: none; }
+
+  .warning-section {
+    padding-bottom: 10px; }
+    .warning-section .warning-text p {
+      font-size: 13px; }
+    .warning-section .warning-text ul li p {
+      margin: 0; }
+
+  #second-callback h4 {
+    font-size: 20px; }
+
+  #advantage-section, #price-list, #portfolio, #skills-section {
+    padding: 15px 0 !important; }
+    #advantage-section h2, #price-list h2, #portfolio h2, #skills-section h2 {
+      padding: 5px 0 !important;
+      margin-bottom: 10px !important;
+      font-size: 20px; }
+    #advantage-section figure, #price-list figure, #portfolio figure, #skills-section figure {
+      padding: 1px;
+      margin: 0; }
+      #advantage-section figure h3, #price-list figure h3, #portfolio figure h3, #skills-section figure h3 {
+        margin: 2px 0 5px;
+        font-size: 16px; }
+      #advantage-section figure figcaption, #price-list figure figcaption, #portfolio figure figcaption, #skills-section figure figcaption {
+        font-size: 12px !important; }
+      #advantage-section figure img, #price-list figure img, #portfolio figure img, #skills-section figure img {
+        height: 50px; } }
+@media(max-width: 425px) {
+  .logotype {
+    margin-left: 100px; }
+
+  .contacts {
+    text-align: center; }
+
+  .slogan p {
+    font-size: 14px; }
+
+  #advantage-section, #skills-section, #portfolio, #price-list {
+    padding: 10px 0 !important; }
+    #advantage-section h2, #skills-section h2, #portfolio h2, #price-list h2 {
+      padding: 10px 0;
+      font-size: 24px; }
+
+  #advantage-section figure h3 {
+    font-size: 20px; }
+  #advantage-section figure figcaption {
+    font-size: 13px; }
+  #advantage-section figure img {
+    width: 100px;
+    height: auto; }
+
+  .skill-wrapper {
+    height: 140px;
+    text-align: center; }
+    .skill-wrapper img {
+      margin: 0 auto;
+      float: none; }
+
+  #second-callback h4 {
+    font-size: 18px; }
+
+  #price-list, #portfolio, #skills-section {
+    padding-top: 20px; }
+    #price-list h2, #portfolio h2, #skills-section h2 {
+      padding: 5px 0 !important;
+      margin-bottom: 10px !important;
+      font-size: 20px; }
+    #price-list figure, #portfolio figure, #skills-section figure {
+      padding: 1px;
+      margin: 0; }
+      #price-list figure h3, #portfolio figure h3, #skills-section figure h3 {
+        margin: 2px 0 5px;
+        font-size: 16px; }
+      #price-list figure figcaption, #portfolio figure figcaption, #skills-section figure figcaption {
+        font-size: 12px !important; }
+      #price-list figure img, #portfolio figure img, #skills-section figure img {
+        height: 50px; } }
+@media(min-width: 601px) and (max-width: 767px) {
+  .manifest p {
+    padding: 0;
+    font-size: 15px; }
+
+  #advantage-section div, #skills-section div, #portfolio div, #price-list div {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px; }
+    #advantage-section div figcaption, #skills-section div figcaption, #portfolio div figcaption, #price-list div figcaption {
+      margin: 0; }
+
+  .gallery-grids {
+    width: 100% !important; } }
+@media(min-width: 500px) and (max-width: 600px) {
+  .manifest p {
+    padding: 0;
+    font-size: 14px; } }
+@media(max-width: 425px) {
+  .manifest {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */

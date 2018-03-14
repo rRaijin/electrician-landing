@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Electric inc.{% endblock title %}
+
+{% block content %}
+
+    <div class="loader">
+        <div class="loaderInner"></div>
+    </div> <!-- Preloader -->
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-light toggle"><i class="glyphicon glyphicon-chevron-left"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light pull-right toggle"><i class="glyphicon glyphicon-chevron-right"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top">{% trans 'Super Electric' %}</a>
+            </li>
+            <li>
+                <a href="#top">{% trans 'Home' %}</a>
+            </li>
+            <li>
+                <a href="#advantage-section">{% trans 'Advantage' %}</a>
+            </li>
+            <li>
+                <a href="#skills-section">{% trans 'Skills' %}</a>
+            </li>
+            <li>
+                <a href="#portfolio">{% trans 'Our Works' %}</a>
+            </li>
+            <li>
+                <a href="#price-list">{% trans 'Our prices' %}</a>
+            </li>
+        </ul>
+    </nav> <!-- /navigation -->
+
+    <header>
+        <div class="container-fluid">
+            <div class="row top-row">
+                <div class="col-lg-4 col-md-3 col-sm-4 col-xs-6 logotype">
+{#                    <img src="" alt="logotype">#}
+                    <h1 style="margin-bottom: 0; text-align: center">YourLogotype</h1>
+                    <p style="text-align: center;">YourDreamCompany</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 manifest">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at corporis dolorem dolorum ducimus ea eius eligendi </p>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12 contacts">
+                    <ul>
+                        <li><i class="glyphicon glyphicon-earphone"></i><span>(050) 220-84-30</span></li>
+                        <li><i class="glyphicon glyphicon-earphone"></i><span>(123) 320-45-67</span></li>
+                    </ul>
+                    <a href="#" class="btn" data-toggle="modal" data-target="#telegramm-form">{% trans 'Get a free consultation' %}</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="telegramm-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">{% trans 'We call you back' %}</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="{% url 'feedback' %}" method="post">
+                                        {% csrf_token %}
+                                        {{ TelegrammForm.as_p }}
+                                        <button>{% trans 'Send' %}</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="parallax-main-head" data-parallax="scroll" data-image-src="{% static 'media/work_images/first_display_bg.jpg' %}" id="top">
+                <div class="col-lg-12 slogan">
+                    <h1>Header 1</h1>
+                    <h2>Header 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Accusantium consequuntur ea eaque eligendi, et eum eveniet incidunt natus necessitatibus officia.
+                        Adipisci aliquam cum distinctio fuga molestiae quia sunt veniam voluptatem.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-8 col-sm-5 col-sm-offset-6 col-xs-8 col-xs-offset-2 contact-form">
+                        <form action="" method="post">
+                            <h3>{% trans 'Form header' %}</h3>
+                            <p>{% trans 'Some help text' %}</p>
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <textarea></textarea>
+                            <input type="submit" value="Go">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="row advantages" id="advantage-section">
+            <h2>Advantages</h2>
+            {% for advantage in advantages %}
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <figure>
+                        <h3>{{ advantage.title }}</h3>
+                        <figcaption>{{ advantage.text }}</figcaption>
+                        <img src="{{ advantage.image.url }}" alt="advantage1-img" class="img-responsive">
+                    </figure>
+                </div>
+            {% endfor %}
+        </section>
+
+        <section class="row skills" id="skills-section">
+            <h2>Skills</h2>
+            {% for skill in skills %}
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div class="skill-wrapper">
+                        <img src="{{ skill.image.url }}" alt="skill1-img" class="img-responsive">
+                        <p>{{ skill.title }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+
+        <section class="row warning-section">
+            <div class="col-lg-6 col-md-6 col-sm-6 warning-img">
+                <img src="{% static 'media/renewable-power.jpg' %}" class="img-responsive" alt="warning-img">
+            </div>
+
+            <div class="col-lg-5 col-md-6 col-sm-6 warning-text">
+                <h2>Header Warning</h2> <!-- Сместить вправо -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusamus, aperiam exercitationem impedit quibusdam saepe sed.
+                    Aliquid aspernatur beatae, corporis deleniti, enim error expedita, fugit iure labore
+                    perspiciatis repellat reprehenderit ut.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Accusamus, aperiam exercitationem impedit quibusdam saepe sed.
+                    Aliquid aspernatur beatae, corporis deleniti, enim error expedita, fugit iure labore
+                    perspiciatis repellat reprehenderit ut.</p>
+                <ul>
+                    <li>
+                        <p>Warning 1</p>
+                    </li>
+                    <li>
+                        <p>Warning 2</p>
+                    </li>
+                    <li>
+                        <p>Warning 3</p>
+                    </li>
+                    <li>
+                        <p>Warning 4</p>
+                    </li>
+                </ul>
+                <p>Our feedback and our professionalism confirm our skill!</p>
+            </div>
+        </section>
+
+        <section class="row" id="second-callback">
+            <div class="parallax-main-callback" data-parallax="scroll" data-image-src="{% static 'media/work_images/first_display_bg.jpg' %}">
+                <h4>Tempolarity h Parallax + Callback Form Here</h4>
+                <a href="" class="btn btn-danger" data-toggle="modal" data-target="#telegramm2-form">{% trans 'Get a free consultation' %}</a>
+                <!-- Modal -->
+                <div class="modal fade" id="telegramm2-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h3 class="modal-title" id="myModalLabel">{% trans 'We call you back' %}</h3>
+                            </div>
+                            <div class="modal-body">
+                                <form action="{% url 'feedback' %}" method="post">
+                                    {% csrf_token %}
+                                    {{ TelegrammForm.as_p }}
+                                    <button>{% trans 'Send Me' %}</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="row portfolio" id="portfolio">
+            <h2>OUR WORKS</h2>
+            <div class="gallery-grids">
+                {% for item in gallery %}
+                    <div class="col-md-4 col-sm-6 gallery-grid gallery1">
+                        <img src="{{ item.image.url }}" class="img-responsive" alt="gallery-item-img">
+                        <div class="textbox">
+                            <div class="text-center">
+                                <a href="" class="btn button">MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="row price-list" id="price-list">
+            <h2>Price Block</h2>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <figure>
+                    <h3>{% trans 'We provide' %}</h3>
+                    <figcaption>{% trans 'The arrival of the master is free' %}</figcaption>
+                    <img src="{% static 'media/work_images/prihod.png' %}" alt="price-block-1-img" class="img-responsive">
+                </figure>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <figure>
+                    <h3>{% trans 'We provide' %}</h3>
+                    <figcaption>{% trans 'Discounts' %}</figcaption>
+                    <img src="{% static 'media/work_images/skidka.png' %}" alt="price-block-1-img" class="img-responsive">
+                </figure>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <figure>
+                    <h3>{% trans 'We provide' %}</h3>
+                    <figcaption>{% trans 'Bonuses' %}</figcaption>
+                    <img src="{% static 'media/work_images/bonus.png' %}" alt="price-block-1-img" class="img-responsive">
+                </figure>
+            </div>
+        </section>
+
+        <div class="separator-div"></div>
+
+        <footer>
+            <p>{% trans 'Presentation is not a commercial project' %}</p>
+        </footer>
+    </div>
+{% endblock content %}

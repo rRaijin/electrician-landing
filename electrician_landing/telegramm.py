@@ -5,8 +5,8 @@ from django.shortcuts import redirect
 from apps.landing.forms import TelegrammForm
 
 
-token = '469723110:AAEewGk34x63M7tzKYiIQhohvx86ykR6tfU'
-my_id = 521853533
+token = ''
+my_id = 
 telegramBot = telepot.Bot(token)
 
 

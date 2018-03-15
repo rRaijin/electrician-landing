@@ -19,6 +19,6 @@ def handle(request):
             message = "*ЗАЯВКА С САЙТА*:" + "\n" + \
                       "*ТЕЛЕФОН*: " + str(phone) + "\n" + \
                       "От " + str(name)
-            telegramBot.sendMessage(521853533, message, parse_mode="Markdown")
+            telegramBot.sendMessage(my_id, message, parse_mode="Markdown")
             return redirect('/')
         return redirect('/')
